@@ -43,6 +43,7 @@ class DIPConfig(BaseConfig):
         self.ignore_history_detection = bool(self.config_dict['ignore_history_detection'])
         self.z_threshold = self.config_dict['z_threshold']
         self.prefix_length = self.config_dict['prefix_length']
+        self.hash_key = int(self.config_dict['hash_key']).to_bytes(16, 'big')
     
     @property
     def algorithm_name(self) -> str:
